@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <title>Create User</title>
+  </head>
+
+  <body class="min-h-screen bg-[#f7f8fc] text-zinc-900">
+    <!-- Background -->
+    <div class="fixed inset-0 -z-0 overflow-hidden pointer-events-none">
+      <div
+        class="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-blue-200/30 blur-3xl"
+      ></div>
+
+      <div
+        class="absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-violet-200/25 blur-3xl"
+      ></div>
+    </div>
+
+    <!-- Page -->
+    <main
+      class="relative z-10 min-h-screen flex items-center justify-center px-5 py-12"
+    >
+      <!-- Card -->
+      <div
+        class="w-full max-w-2xl overflow-hidden rounded-3xl border border-zinc-200/80 bg-white shadow-[0_25px_70px_-25px_rgba(0,0,0,0.18)]"
+      >
+        <!-- Top section -->
+        <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+          <!-- Icon + badge -->
+          <div class="mb-7 flex items-center justify-between">
+            <div
+              class="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 ring-1 ring-blue-100"
+            >
+              <i class="fa-solid fa-user-plus text-xl"></i>
+            </div>
+
+            <div
+              class="hidden items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3.5 py-2 text-xs font-medium text-zinc-500 sm:flex"
+            >
+              <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+              New user
+            </div>
+          </div>
+
+          <!-- Heading -->
+          <div class="mb-8">
+            <h1
+              class="text-3xl font-semibold tracking-tight text-zinc-950 sm:text-4xl"
+            >
+              Create a new user
+            </h1>
+
+            <p
+              class="mt-2 max-w-xl text-sm leading-6 text-zinc-500 sm:text-base"
+            >
+              Add a new user to your application. Enter their details below to
+              create their profile.
+            </p>
+          </div>
+
+          <!-- Form -->
+          <form class="space-y-6">
+            <!-- Two column section -->
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <!-- Name -->
+              <div>
+                <label
+                  for="name"
+                  class="mb-2 block text-sm font-semibold text-zinc-800"
+                >
+                  Full name
+                </label>
+
+                <div class="relative">
+                  <i
+                    class="fa-regular fa-user absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400"
+                  ></i>
+
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="John Doe"
+                    class="w-full rounded-xl border border-zinc-200 bg-zinc-50/70 py-3.5 pl-11 pr-4 text-sm text-zinc-900 placeholder-zinc-400 outline-none transition duration-200 hover:border-zinc-300 hover:bg-white focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
+                  />
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label
+                  for="email"
+                  class="mb-2 block text-sm font-semibold text-zinc-800"
+                >
+                  Email address
+                </label>
+
+                <div class="relative">
+                  <i
+                    class="fa-regular fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400"
+                  ></i>
+
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="john@example.com"
+                    class="w-full rounded-xl border border-zinc-200 bg-zinc-50/70 py-3.5 pl-11 pr-4 text-sm text-zinc-900 placeholder-zinc-400 outline-none transition duration-200 hover:border-zinc-300 hover:bg-white focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Image URL -->
+            <div>
+              <div class="mb-2 flex items-center justify-between">
+                <label
+                  for="image"
+                  class="block text-sm font-semibold text-zinc-800"
+                >
+                  Profile image
+                </label>
+
+                <span class="text-xs text-zinc-400"> Optional </span>
+              </div>
+
+              <div class="relative">
+                <i
+                  class="fa-regular fa-image absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400"
+                ></i>
+
+                <input
+                  id="image"
+                  name="image"
+                  type="url"
+                  placeholder="https://example.com/photo.jpg"
+                  class="w-full rounded-xl border border-zinc-200 bg-zinc-50/70 py-3.5 pl-11 pr-4 text-sm text-zinc-900 placeholder-zinc-400 outline-none transition duration-200 hover:border-zinc-300 hover:bg-white focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
+                />
+              </div>
+
+              <p class="mt-2 text-xs text-zinc-400">
+                Use a publicly accessible image URL.
+              </p>
+            </div>
+
+            <!-- Submit -->
+            <button
+              type="submit"
+              class="group flex w-full items-center justify-center gap-2.5 rounded-xl bg-blue-600 px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/25 active:translate-y-0 active:scale-[0.99]"
+            >
+              <i
+                class="fa-solid fa-plus text-sm transition-transform duration-200 group-hover:rotate-90"
+              ></i>
+
+              <span>Create User</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Bottom footer -->
+        <div
+          class="mt-8 border-t border-zinc-100 bg-zinc-50/70 px-8 py-5 sm:px-10"
+        >
+          <div
+            class="flex items-center justify-center gap-2.5 text-xs text-zinc-500"
+          >
+            <div
+              class="flex h-7 w-7 items-center justify-center rounded-full bg-white text-zinc-400 shadow-sm ring-1 ring-zinc-200"
+            >
+              <i class="fa-solid fa-shield-halved text-[11px]"></i>
+            </div>
+
+            <span> Your information is securely stored. </span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
